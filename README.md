@@ -5,23 +5,23 @@ The project is inspired by React library, the approach is very close to what rea
 
 ### Available scripts:
 
+To run production build and fire up the server on port 3000:
+
 ```
 npm start
 ```
 
-Runs production build and fire up the server on port 3000
+To run the build script and generate build folder with bundle.js inside:
 
 ```
 npm run build
 ```
 
-Runs the build script and generates build folder with bundle.js inside.
+To run the development server:
 
 ```
 npm run dev
 ```
-
-Runs the development server
 
 ### Dependencies:
 
