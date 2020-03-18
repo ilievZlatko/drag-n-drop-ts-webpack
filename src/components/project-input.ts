@@ -3,7 +3,6 @@ import { Validatable, validate } from '../util/validation'
 import { autobind } from '../decorators/autobind'
 import { projectState } from '../state/project-state'
 
-// ProjectInput Class
 export default class ProjectInput extends Component<
 	HTMLDivElement,
 	HTMLFormElement
