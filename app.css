@@ -1,133 +1,100 @@
 * {
-	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
 }
 
+body,
 html {
-	font-family: sans-serif;
+	width: 100%;
+	height: 100%;
 }
 
 body {
-	margin: 0;
+	background-color: #1abc9c;
 }
 
-label,
-input,
-textarea {
-	display: block;
-	margin: 0.5rem 0;
-	border-radius: 5px;
+.clock {
+	width: 300px;
+	height: 300px;
+	background: #fff url(../img/clock-face.png) no-repeat center;
+	border-radius: 50%;
+	background-size: 90%;
+	box-sizing: border-box;
+	position: relative;
+	z-index: 100;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
 }
 
-label {
-	font-weight: bold;
+.clock:before {
+	background: crimson;
+	content: '';
+	width: 5%;
+	height: 5%;
+	border-radius: 50%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 10;
 }
 
-input,
-textarea {
-	font: inherit;
-	padding: 0.2rem 0.4rem;
-	width: 100%;
-	max-width: 30rem;
-	border: 1px solid #ccc;
+.clock_base {
+	background: #95a5a6;
+	width: 330px;
+	height: 330px;
+	content: '';
+	position: absolute;
+	border-radius: 50%;
+	border: 1px solid #7f8c8d;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
 }
 
-input:focus,
-textarea:focus {
-	outline: none;
-	background: #fff5f9;
+.hours-container,
+.minutes-container,
+.seconds-container {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
 }
 
-button {
-	font: inherit;
-	background: #ff0062;
-	border: 1px solid #ff0062;
-	cursor: pointer;
-	color: white;
-	padding: 0.75rem 1rem;
+.hours {
+	background: #000;
+	height: 20%;
+	width: 2.5%;
+	position: absolute;
+	top: 30%;
+	left: 48.75%;
+	transform-origin: center bottom;
+	border-radius: 50px;
 }
 
-button:focus {
-	outline: none;
+.minutes {
+	background: #000;
+	height: 40%;
+	width: 2%;
+	position: absolute;
+	top: 10%;
+	left: 49%;
+	transform-origin: center bottom;
+	border-radius: 50px;
 }
 
-button:hover,
-button:active {
-	background: #a80041;
-	border-color: #a80041;
+.seconds {
+	background-color: crimson;
+	height: 45%;
+	width: 1%;
+	position: absolute;
+	top: 14%;
+	left: 49.5%;
+	border-radius: 100px;
+	z-index: 10;
+	transform-origin: 50%;
 }
 
-.projects {
-	margin: 1rem;
-	border: 1px solid #ff0062;
-	border-radius: 5px;
-	overflow: hidden;
-}
-
-.projects header {
-	background: #ff0062;
-	height: 3.5rem;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-
-#finished-projects {
-	border-color: #0044ff;
-}
-
-#finished-projects header {
-	background: #0044ff;
-}
-
-.projects h2 {
-	margin: 0;
-	color: white;
-}
-
-.projects ul {
-	list-style: none;
-	margin: 0;
-	padding: 1rem;
-}
-
-.projects li {
-	box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.26);
-	padding: 1rem;
-	margin: 1rem;
-	border-radius: 5px;
-	background-color: white;
-}
-
-.projects li h2 {
-	color: #ff0062;
-	margin: 0.5rem 0;
-}
-
-#finished-projects li h2 {
-	color: #0044ff;
-}
-
-.projects li h3 {
-	color: #575757;
-	font-size: 1rem;
-}
-
-.project li p {
-	margin: 0;
-}
-
-.droppable {
-	background: #ffe3ee;
-}
-
-#finished-projects .droppable {
-	background: #d6e1ff;
-}
-
-#user-input {
-	margin: 1rem;
-	padding: 1rem;
-	border: 1px solid #ff0062;
-	background: #f7f7f7;
-	border-radius: 5px;
-}
+/** Place your code below */
